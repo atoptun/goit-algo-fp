@@ -1,0 +1,24 @@
+[project]
+name = "goit-algo-fp"
+version = "0.1.0"
+description = "Neoversity. Algorithms. Final project."
+authors = [
+    {name = "atoptun",email = "topa1978@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "scipy (>=1.16.1,<2.0.0)",
+    "matplotlib (>=3.10.6,<4.0.0)",
+    "numpy (>=2.3.3,<3.0.0)",
+    "pulp (>=3.3.0,<4.0.0)",
+    "pytest (>=8.4.2,<9.0.0)",
+    "rgb-gradient (>=0.0.2,<0.0.3)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
