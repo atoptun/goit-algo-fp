@@ -1,7 +1,7 @@
 from pprint import pprint
 
 
-def greedy_algorithm(items: dict, budget: int):
+def greedy_algorithm(items: dict, budget: int) -> tuple[list[str], int, int]:
     """Greedy algorithm to maximize calories within budget"""
     sorted_items = sorted(items.items(), key=lambda x: x[1]['calories'] / x[1]['cost'], reverse=True)
     
@@ -18,7 +18,7 @@ def greedy_algorithm(items: dict, budget: int):
     return selected_items, total_cost, total_calories
 
 
-def dynamic_programming(items: dict, budget: int):
+def dynamic_programming(items: dict, budget: int) -> tuple[list[str], int, int]:
     """Dynamic programming approach to maximize calories within budget"""
     n = len(items)
     dp = [[0 for _ in range(budget + 1)] for _ in range(n + 1)]
