@@ -10,10 +10,11 @@ class Node:
 
 class LinkedList:
     """A singly linked list."""
-    def __init__(self, items: list = []):
+    def __init__(self, items: list | None = None):
         self.head: Node | None = None
-        for item in items:
-            self.insert_at_end(item)
+        if items:
+            for item in items:
+                self.insert_at_end(item)
 
     def insert_at_beginning(self, data):
         new_node = Node(data)
